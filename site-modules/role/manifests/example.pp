@@ -1,7 +1,7 @@
 class role::example {
 
   group { 'testgroup' :
-    name   => "testgroup111",
+    name   => "testgroup12345",
     ensure => present,
   }
 
