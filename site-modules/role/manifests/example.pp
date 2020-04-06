@@ -1,14 +1,12 @@
 class role::example {
 
-  group { 'testgroup' :
-    name   => "testgroup12345",
-    ensure => present,
-  }
 
+  package { 'hiera-eyaml-server':
+    ensure => installed,
+    name => 'hiera-eyaml',
+    provider => 'puppetserver_gem',
+# require => File['gemrc'],
+}
 
-  user { 'testuser1' :
-    name   => "testuser111",
-    ensure => present,
-  }
 
 }
